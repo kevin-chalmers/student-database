@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>AngularJS First Application</title>
+        <title>AngularJS Controller</title>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.js"></script>
+        <script src="index.js"></script>
     </head>
     <body>
-        <h1>Sample Application</h1>
-        <div ng-app = "">
-            <p>Enter your Name: <input type="text" ng-model="name"></p>
-            <p>Hello <span ng-bind="name"></span>!</p>
+        <h2>AngularJS Sample Application</h2>
+        <div ng-app = "mainApp" ng-controller = "studentController">
+            <p>ID: <input type="text" ng-model="student.id"></p>
+            <p>Name: <input type="text" ng-model="student.name"></p>
+            <p><input type="button" value="Click Me!" ng-click="update()"></p>
         </div>
     </body>
 </html>
